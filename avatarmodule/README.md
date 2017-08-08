@@ -15,6 +15,9 @@ Sets the T-Shirt of the target  **character** to the **assetid**.
 #### avatar.pants(character, assetid)
 Sets the Pants of the target  **character** to the **assetid**.
 
+#### avatar.face(character, assetid)
+Sets the Face of the target  **character** to the **assetid**.
+
 #### avatar.addaccessory(character, assetid)
 Adds an accessory to the target **character** from **assetid**.
 
