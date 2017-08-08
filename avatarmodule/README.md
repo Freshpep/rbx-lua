@@ -3,6 +3,19 @@
 ### Usage
 Copy and paste the code from the module (since ROBLOX doesn't fully support importing Lua files) and require it from the server if using FilteringEnabled and/or with Experimental Mode disabled. This can also be used without a module, but it's recommended to use it as a module.
 
+### Example
+```Lua
+-- Assuming you put the avatar module into ReplicatedStorage and named it 'avatar',
+local avatar=require(game:GetService("ReplicatedStorage").avatar)
+
+game.Players.PlayerAdded:connect(function(player)
+	player.CharacterAppearanceLoaded:connect(function()
+		local char=player.Character
+		avatar.headscale(char, 3)
+	end)
+end)
+```
+
 ### Module functions
 _(assuming you defined the module as 'avatar')_
 
@@ -41,17 +54,3 @@ Changes the depth scale of a target R15 **character** to **scale**.
 
 #### avatar.headscale(character, scale)
 Changes the head scale of a target R15 **character** to **scale**.
-
-
-### Example
-```Lua
--- Assuming you put the avatar module into ReplicatedStorage and named it 'avatar',
-local avatar=require(game:GetService("ReplicatedStorage").avatar)
-
-game.Players.PlayerAdded:connect(function(player)
-	player.CharacterAppearanceLoaded:connect(function()
-		local char=player.Character
-		avatar.headscale(char, 3)
-	end)
-end)
-
