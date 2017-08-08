@@ -39,3 +39,16 @@ Changes the depth scale of a target R15 **character** to **scale**.
 #### avatar.headscale(character, scale)
 Changes the head scale of a target R15 **character** to **scale**.
 
+
+### Example
+```Lua
+-- Assuming you put the avatar module into ReplicatedStorage and named it 'avatar',
+local avatar=require(game:GetService("ReplicatedStorage").avatar)
+
+game.Players.PlayerAdded:connect(function(player)
+	player.CharacterAppearanceLoaded:connect(function()
+		local char=player.Character
+		avatar.headscale(char, 3)
+	end)
+end)
+
