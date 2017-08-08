@@ -1,5 +1,4 @@
 # Avatar Editor & Utility module
-## Created by Smeers
 
 ### Usage
 Copy and paste the code from the module (since ROBLOX doesn't fully support importing Lua files) and require it from the server if using FilteringEnabled and/or with Experimental Mode disabled. This can also be used without a module, but it's recommended to use it as a module.
