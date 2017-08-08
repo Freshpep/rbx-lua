@@ -59,6 +59,16 @@ function avatar.pants(character,asset)
 	end
 end
 
+function avatar.face(character,asset)
+	local success, item=insertAsset(tostring(asset))
+	if success then
+		if character.Head:FindFirstChild("face") then
+			character.Head:FindFirstChild("face"):Destroy()
+		end
+	item.Parent=character.Head
+	end
+end
+
 function avatar.addaccessory(character,asset)
 	local success,humanoid=getHumanoid(character)
 	local success0,item=insertAsset(asset)
