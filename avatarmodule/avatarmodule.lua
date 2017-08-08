@@ -91,7 +91,7 @@ end
 
 function avatar.getaccessories(character)
 	local accessories={}
-	for i,v in ipairs(character) do
+	for i,v in ipairs(character:GetChildren()) do
 		if v:IsA("Accessory") then
 			table.insert(accessories,v)
 		end
