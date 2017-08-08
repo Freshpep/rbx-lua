@@ -8,4 +8,4 @@ https://www.gnu.org/licenses/gpl-3.0.en.html
 Most scripts will display which area they should be placed in, unless automatically placed by another script.
 For instance, some scripts may be entirely _clientside_ or entirely _serverside_.
 
-I'll expect all users to know how to use the scripts property if they are using _FilteringEnabled_ or having _Experimental Mode_ disabled.
+I'll expect all users to know how to use the scripts properly if they are using _FilteringEnabled_ or having _Experimental Mode_ disabled.
