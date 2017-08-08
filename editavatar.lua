@@ -22,36 +22,33 @@ end
 -- Vars for ease
 local rbxai="rbxassetid://"
 
-function avatar.shirt(character,asset)
-	if character:FindFirstChild("Shirt") then
-		local shirt=character:FindFirstChild("Shirt")
-		shirt.ShirtTemplate=rbxai..tostring(asset)
-	else
-		local shirt=Instance.new("Shirt",character)
-		shirt.Name="Shirt" -- Can't trust ROBLOX's default names nowadays with the api changing constantly lol
-		shirt.ShirtTemplate=rbxai..tostring(asset)
+function avatar.shirt(character,asset) -- I could make shirt, tshirt, and pants one function, but idk what to name that function lol
+	local success, item=insertAsset(tostring(asset))
+	if success then
+		if character:FindFirstChild("Shirt") then
+			character:FindFirstChild("Shirt"):Destroy()
+		end
+	item.Parent=character
 	end
 end
 
 function avatar.tshirt(character,asset)
-	if character:FindFirstChild("Shirt Graphic") then
-		local graphic=character:FindFirstChild("Shirt Graphic")
-		graphic.Graphic=rbxai..tostring(asset)
-	else
-		local graphic=Instance.new("ShirtGraphic",character)
-		graphic.Name="Shirt Graphic"
-		graphic.Graphic=rbxai..tostring(asset)
+	local success, item=insertAsset(tostring(asset))
+	if success then
+		if character:FindFirstChild("Shirt Graphic") then
+			character:FindFirstChild("Shirt Graphic"):Destroy()
+		end
+	item.Parent=character
 	end
 end
 
 function avatar.pants(character,asset)
-	if character:FindFirstChild("Pants") then
-		local pants=character:FindFirstChild("Pants")
-		pants.PantsTemplate=rbxai..tostring(asset)
-	else
-		local pants=Instance.new("Pants",character)
-		pants.Name="Pants"
-		pants.PantsTemplate=rbxai..tostring(asset)
+	local success, item=insertAsset(tostring(asset))
+	if success then
+		if character:FindFirstChild("Pants") then
+			character:FindFirstChild("Pants"):Destroy()
+		end
+	item.Parent=character
 	end
 end
 
@@ -79,7 +76,7 @@ function avatar.delaccessory(character,name)
 	end
 end
 
-function avatar.clearaccessory(character)
+function avatar.clraccessories(character)
 	local success,humanoid=getHumanoid(character)
 	if success then
 		humanoid:RemoveAccessories()
