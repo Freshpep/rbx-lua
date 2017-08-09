@@ -1,6 +1,6 @@
 -- // Avatar Editor & Utility Module
 -- // Author: Smeers
--- // 8/8/2017
+-- // 8/9/2017
 
 -- [Note] There's a few ways to make this more efficient, but I chose not to in some places for usability purposes.
 
