@@ -69,6 +69,30 @@ function avatar.face(character,asset)
 	end
 end
 
+function avatar.removeshirt(character)
+	if character:FindFirstChild("Shirt") then
+		character["Shirt"]:Destroy()	
+	end
+end
+
+function avatar.removetshirt(character)
+	if character:FindFirstChild("Shirt Graphic") then
+		character["Shirt Graphic"]:Destroy()	
+	end
+end
+
+function avatar.removepants(character)
+	if character:FindFirstChild("Pants") then
+		character["Pants"]:Destroy()	
+	end
+end
+
+function avatar.removeface(character)
+	if character.Head:FindFirstChild("face") then
+		character.Head["face"]:Destroy()	
+	end
+end
+
 function avatar.addaccessory(character,asset)
 	local success,humanoid=getHumanoid(character)
 	local success0,item=insertAsset(asset)
