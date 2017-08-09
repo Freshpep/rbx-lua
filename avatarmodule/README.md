@@ -31,14 +31,26 @@ Sets the Pants of the target  **character** to the **assetid**.
 #### avatar.face(character, assetid)
 Sets the Face of the target  **character** to the **assetid**.
 
+#### avatar.removeshirt(character)
+Removes the Shirt of the target **character**.
+
+#### avatar.removetshirt(character)
+Removes the T-Shirt of the target **character**.
+
+#### avatar.removepants(character)
+Removes the Pants of the target **character**.
+
+#### avatar.removeface(character)
+Removes the Face of the target **character**.
+
 #### avatar.addaccessory(character, assetid)
-Adds an accessory to the target **character** from **assetid**.
+Adds an Accessory to the target **character** from **assetid**.
 
 #### avatar.delaccessory(character, name)
-Deletes an accessory from the target  **character** using **name**.
+Deletes an Accessory from the target  **character** using **name**.
 
 #### avatar.clraccessories(character)
-Clears all accessories on the target **character**.
+Clears all Accessories on the target **character**.
 
 #### avatar.getaccessories(character)
 Returns a table of all accessories on the target **character**.
